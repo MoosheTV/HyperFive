@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HyperFive
+namespace HyperFive.Game
 {
-    public class Class1
-    {
-    }
+	class VehicleController
+	{
+	}
 }

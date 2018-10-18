@@ -7,6 +7,9 @@
 *.userosscache
 *.sln.docstates
 
+# References to CitizenFX
+References/CitizenFX.Core.dll
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

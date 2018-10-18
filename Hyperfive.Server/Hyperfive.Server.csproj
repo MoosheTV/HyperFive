@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4DADA2C-168E-4020-B203-56B5CC504F32}</ProjectGuid>
+    <ProjectGuid>{5AE79049-0A95-4572-B13A-53A46E462846}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HyperFive</RootNamespace>
-    <AssemblyName>HyperFive.net</AssemblyName>
+    <RootNamespace>Hyperfive.Server</RootNamespace>
+    <AssemblyName>Hyperfive.Server.net</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CitizenFX.Core">
-      <HintPath>..\..\..\..\AppData\Local\FiveM\FiveM.app\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll</HintPath>
+      <HintPath>..\References\CitizenFX.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -47,23 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Hyperfive.Server\SharedModels\SessionDataModel.cs">
-      <Link>SharedModels\SessionDataModel.cs</Link>
+    <Compile Include="..\HyperFive\Util\CachedValue.cs">
+      <Link>Util\CachedValue.cs</Link>
     </Compile>
-    <Compile Include="Client.cs" />
-    <Compile Include="ClientAccessor.cs" />
-    <Compile Include="Game\DecorController.cs" />
-    <Compile Include="Game\GameController.cs" />
-    <Compile Include="Game\PlayerController.cs" />
-    <Compile Include="Game\TimeController.cs" />
-    <Compile Include="Game\VehicleController.cs" />
-    <Compile Include="Game\Weather.cs" />
-    <Compile Include="Game\WorldController.cs" />
-    <Compile Include="Player\Session.cs" />
+    <Compile Include="..\HyperFive\Util\Log.cs">
+      <Link>Util\Log.cs</Link>
+    </Compile>
     <Compile Include="Player\SessionManager.cs" />
+    <Compile Include="Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\CachedValue.cs" />
-    <Compile Include="Util\Log.cs" />
+    <Compile Include="ServerAccessor.cs" />
+    <Compile Include="Player\Session.cs" />
+    <Compile Include="Util\CachedConvar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SharedModels\SessionDataModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
