@@ -51,19 +51,19 @@ These values can only be edited server-side. This ensures the integrity of the d
 
 #### Client-Side:
 ```cs
-var playerPos = Server.Player.Position;
-BaseScript.TriggerServerEvent("Player.CollectPosition", playerPos.X, playerPos.Y, playerPos.Z );
+var playerPos = Client.Player.Position;
+BaseScript.TriggerServerEvent( "Player.CollectPosition", playerPos.X, playerPos.Y, playerPos.Z );
 ```
 
 #### Server-Side:
 ```cs
-Server.RegisterEvent("Player.CollectPosition", new Action<Player, float, float, float>( OnClientData );
+Server.RegisterEvent( "Player.CollectPosition", new Action<Player, float, float, float>( OnClientData ) );
 
 ...
 
 private void OnClientData([FromSource] Player source, float x, float y, float z) {
   var session = Server.Sessions.FromPlayer( source );
-  session?.SetProtectedData("Position", new float [] {x, y, z});
+  session?.SetProtectedData( "Position", new float [] {x, y, z} );
 }
 ```
 
