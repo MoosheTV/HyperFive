@@ -3,6 +3,19 @@ A FiveM resource framework written in C#.
 
 This project is still under development and there's no public release yet, however, this will give structure to resources written in C#, and hopefully encourage people to explore the development of FiveM resources in C#.
 
+____
+
+## :warning: PLEASE READ BEFORE CONTINUING :warning:
+This framework has been discontinued. The framework was never finished, and doesn't run without some serious tweaking. I am archiving this repository for a number of reasons:
+- There is no point of having a 3rd party basic framework like this; the majority of the changes made have been submitted to the main FiveM repository.
+- The SessionManager API is currently broken (I believe the issue is related to steam identifiers, but I've not confirmed this).
+- I don't have the time to dedicate working on this.
+
+This repository *does* serve as a learning experience, which is why I have archived it. This repository serves as a good foundation to other would-be frameworks which expand on the basic nature of this one, which may include special game modes (such as roleplay or something entirely different).
+
+I may release a fully fledged framework some day, but *this* repository is not it.
+
+____
 
 ## Basic Structure
 
